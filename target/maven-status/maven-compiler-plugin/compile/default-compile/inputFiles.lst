@@ -1,0 +1,13 @@
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/AtendimentoEncomendas.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/CatalogoPrecos.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/ControleAcesso.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/Encomenda.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/FormaPagamento.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/FormasPagamentoAceitas.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/GrupoProduto.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/ItemPedido.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/PagamentoPix.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/Pedido.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/RegistroVendas.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/Usuario.java
+/workspaces/maria.cruz.foot/src/main/java/com/mariacruz/foot/pdv/Venda.java

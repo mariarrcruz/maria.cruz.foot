@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.052 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest
+com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_feliz_vendaConcluidaSemExigirNemEmitirComprovante -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_feliz_vendaConcluidaSemExigirNemEmitirComprovante(Rn07SemComprovanteRedTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_invalida_fluxoNaoExigeComprovanteParaConcluir -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_invalida_fluxoNaoExigeComprovanteParaConcluir(Rn07SemComprovanteRedTest.java:48)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_limite_qualquerFormaAceitaMantemNaoEmissao -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_limite_qualquerFormaAceitaMantemNaoEmissao(Rn07SemComprovanteRedTest.java:35)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_estadoProibido_pdvNaoEmiteComprovante -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn07SemComprovanteRedTest.rn07_estadoProibido_pdvNaoEmiteComprovante(Rn07SemComprovanteRedTest.java:61)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

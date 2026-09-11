@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rn06RetiradaRedTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.090 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rn06RetiradaRedTest
+com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_limite_confirmacaoImediataAposEntregaPermiteBaixa -- Time elapsed: 0.013 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_limite_confirmacaoImediataAposEntregaPermiteBaixa(Rn06RetiradaRedTest.java:30)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_estadoProibido_encomendaJaRealizadaNaoRecebeNovaBaixa -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_estadoProibido_encomendaJaRealizadaNaoRecebeNovaBaixa(Rn06RetiradaRedTest.java:88)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_conflito_duasTentativasDeBaixaNaoGeramDuasBaixas -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_conflito_duasTentativasDeBaixaNaoGeramDuasBaixas(Rn06RetiradaRedTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_feliz_localizaConfereEntregaEConfirmaMarcaRealizada -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_feliz_localizaConfereEntregaEConfirmaMarcaRealizada(Rn06RetiradaRedTest.java:18)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_estadoProibido_realizadaSemConferenciaEEntregaEProibida -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_estadoProibido_realizadaSemConferenciaEEntregaEProibida(Rn06RetiradaRedTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_invalida_baixaAntesDaConferenciaExigeConferencia -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_invalida_baixaAntesDaConferenciaExigeConferencia(Rn06RetiradaRedTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_invalida_baixaAntesDaEntregaNaoMarcaRealizada -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn06RetiradaRedTest.rn06_invalida_baixaAntesDaEntregaNaoMarcaRealizada(Rn06RetiradaRedTest.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

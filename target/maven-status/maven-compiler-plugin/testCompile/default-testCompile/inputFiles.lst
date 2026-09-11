@@ -1,0 +1,14 @@
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rn01PrecosFixosRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rn02PagamentosAceitosRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rn03PixExternoRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rn04RegistroVendaRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rn05EncomendaPagaRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rn06RetiradaRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rn07SemComprovanteRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rnf01ConsistenciaCalculosRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rnf02IntegridadeRegistroRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rnf07Rnf08PrevencaoFeedbackRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rnf09Rnf10PersistenciaFalhasRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rnf11AcessoRestritoRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rnf12ProtecaoDuplicadaRedTest.java
+/workspaces/maria.cruz.foot/src/test/java/com/mariacruz/foot/pdv/Rnf13Rnf14PrecosRastreabilidadeRedTest.java

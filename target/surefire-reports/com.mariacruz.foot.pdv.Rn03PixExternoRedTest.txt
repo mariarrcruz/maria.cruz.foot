@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rn03PixExternoRedTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.064 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rn03PixExternoRedTest
+com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_limite_confirmacaoAntesDoRegistroPermiteRegistrarDepois -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: PagamentoPix.confirmacaoExternaRecebida não implementado
+	at com.mariacruz.foot.pdv.PagamentoPix.confirmacaoExternaRecebida(PagamentoPix.java:12)
+	at com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_limite_confirmacaoAntesDoRegistroPermiteRegistrarDepois(Rn03PixExternoRedTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_invalida_semConfirmacaoExternaNaoRegistraComoConfirmado -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: PagamentoPix.registrarSemSubstituirMaquininha não implementado
+	at com.mariacruz.foot.pdv.PagamentoPix.registrarSemSubstituirMaquininha(PagamentoPix.java:24)
+	at com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_invalida_semConfirmacaoExternaNaoRegistraComoConfirmado(Rn03PixExternoRedTest.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_conflito_pdvNaoSubstituiValidacaoExterna -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: PagamentoPix.registrarSemSubstituirMaquininha não implementado
+	at com.mariacruz.foot.pdv.PagamentoPix.registrarSemSubstituirMaquininha(PagamentoPix.java:24)
+	at com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_conflito_pdvNaoSubstituiValidacaoExterna(Rn03PixExternoRedTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_feliz_confirmacaoExternaPermiteProsseguirRegistro -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: PagamentoPix.podeRegistrarVenda não implementado
+	at com.mariacruz.foot.pdv.PagamentoPix.podeRegistrarVenda(PagamentoPix.java:16)
+	at com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_feliz_confirmacaoExternaPermiteProsseguirRegistro(Rn03PixExternoRedTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_estadoProibido_pixSemConfirmacaoNaoEApresentadoComoConcluido -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: PagamentoPix.registrarSemSubstituirMaquininha não implementado
+	at com.mariacruz.foot.pdv.PagamentoPix.registrarSemSubstituirMaquininha(PagamentoPix.java:24)
+	at com.mariacruz.foot.pdv.Rn03PixExternoRedTest.rn03_estadoProibido_pixSemConfirmacaoNaoEApresentadoComoConcluido(Rn03PixExternoRedTest.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.036 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest
+com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_limite_cadaVendaAgrupadaNaFormaCorrespondente -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_limite_cadaVendaAgrupadaNaFormaCorrespondente(Rn02PagamentosAceitosRedTest.java:49)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_estadoProibido_vendaAprovadaComFormaForaDasTresERejeitada -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: FormasPagamentoAceitas.aceitaCodigo não implementado
+	at com.mariacruz.foot.pdv.FormasPagamentoAceitas.aceitaCodigo(FormasPagamentoAceitas.java:14)
+	at com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_estadoProibido_vendaAprovadaComFormaForaDasTresERejeitada(Rn02PagamentosAceitosRedTest.java:71)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_feliz_pixPodeSerRegistrado -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: FormasPagamentoAceitas.aceita não implementado
+	at com.mariacruz.foot.pdv.FormasPagamentoAceitas.aceita(FormasPagamentoAceitas.java:10)
+	at com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_feliz_pixPodeSerRegistrado(Rn02PagamentosAceitosRedTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_invalida_formaForaDasTresNaoEAceita -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: FormasPagamentoAceitas.aceitaCodigo não implementado
+	at com.mariacruz.foot.pdv.FormasPagamentoAceitas.aceitaCodigo(FormasPagamentoAceitas.java:14)
+	at com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_invalida_formaForaDasTresNaoEAceita(Rn02PagamentosAceitosRedTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_feliz_debitoPodeSerRegistrado -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: FormasPagamentoAceitas.aceita não implementado
+	at com.mariacruz.foot.pdv.FormasPagamentoAceitas.aceita(FormasPagamentoAceitas.java:10)
+	at com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_feliz_debitoPodeSerRegistrado(Rn02PagamentosAceitosRedTest.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_feliz_creditoPodeSerRegistrado -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: FormasPagamentoAceitas.aceita não implementado
+	at com.mariacruz.foot.pdv.FormasPagamentoAceitas.aceita(FormasPagamentoAceitas.java:10)
+	at com.mariacruz.foot.pdv.Rn02PagamentosAceitosRedTest.rn02_feliz_creditoPodeSerRegistrado(Rn02PagamentosAceitosRedTest.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

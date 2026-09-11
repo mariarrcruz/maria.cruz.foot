@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.033 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest
+com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf13_invalida_origemDePrecoDiferenteEntreTelasNaoEAceita -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf13_invalida_origemDePrecoDiferenteEntreTelasNaoEAceita(Rnf13Rnf14PrecosRastreabilidadeRedTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf14_feliz_vendaEAlteracaoDeEstadoTemIdEDataHora -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf14_feliz_vendaEAlteracaoDeEstadoTemIdEDataHora(Rnf13Rnf14PrecosRastreabilidadeRedTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf13_feliz_selecaoCalculoRevisaoEConsultaUsamFonteCentral -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf13_feliz_selecaoCalculoRevisaoEConsultaUsamFonteCentral(Rnf13Rnf14PrecosRastreabilidadeRedTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf14_estadoProibido_registroSemIdOuTimestampFalha -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf14_estadoProibido_registroSemIdOuTimestampFalha(Rnf13Rnf14PrecosRastreabilidadeRedTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

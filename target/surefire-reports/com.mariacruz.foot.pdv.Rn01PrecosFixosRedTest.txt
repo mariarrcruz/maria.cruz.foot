@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.070 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest
+com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_limite_quantidadeConsistenteEntreSelecaoRevisaoERegistro -- Time elapsed: 0.012 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalDe(CatalogoPrecos.java:16)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_limite_quantidadeConsistenteEntreSelecaoRevisaoERegistro(Rn01PrecosFixosRedTest.java:66)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_bebidaCustaSeisReais -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_bebidaCustaSeisReais(Rn01PrecosFixosRedTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_salgadoCustaOitoReais -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_salgadoCustaOitoReais(Rn01PrecosFixosRedTest.java:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_limite_pedidoComUmDeCadaGrupoSomaVinteENove -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalDe(CatalogoPrecos.java:16)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_limite_pedidoComUmDeCadaGrupoSomaVinteENove(Rn01PrecosFixosRedTest.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_estadoProibido_vendaPersistidaNaoDivergeDoPrecoRevisado -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_estadoProibido_vendaPersistidaNaoDivergeDoPrecoRevisado(Rn01PrecosFixosRedTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_bolosETortasCustamQuinzeReais -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_bolosETortasCustamQuinzeReais(Rn01PrecosFixosRedTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.145 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest
+com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_estadoProibido_sucessoSemRegistroConfirmadoEProibido -- Time elapsed: 0.048 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_estadoProibido_sucessoSemRegistroConfirmadoEProibido(Rnf07Rnf08PrevencaoFeedbackRedTest.java:81)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_encomendaJaRealizadaTemMensagemCompreensivel -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_encomendaJaRealizadaTemMensagemCompreensivel(Rnf07Rnf08PrevencaoFeedbackRedTest.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_invalida_qrInexistenteInformaNaoLocalizadoENaoBaixa -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_invalida_qrInexistenteInformaNaoLocalizadoENaoBaixa(Rnf07Rnf08PrevencaoFeedbackRedTest.java:71)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_falhaDeRegistroTemMensagemCompreensivel -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: RegistroVendas.buscarPorId não implementado
+	at com.mariacruz.foot.pdv.RegistroVendas.buscarPorId(RegistroVendas.java:18)
+	at com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_falhaDeRegistroTemMensagemCompreensivel(Rnf07Rnf08PrevencaoFeedbackRedTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_qrNaoLocalizadoTemMensagemCompreensivel -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_qrNaoLocalizadoTemMensagemCompreensivel(Rnf07Rnf08PrevencaoFeedbackRedTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf07_feliz_totalDestacadoAntesDaVendaEConfirmacaoAntesDaBaixa -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf07Rnf08PrevencaoFeedbackRedTest.rnf07_feliz_totalDestacadoAntesDaVendaEConfirmacaoAntesDaBaixa(Rnf07Rnf08PrevencaoFeedbackRedTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

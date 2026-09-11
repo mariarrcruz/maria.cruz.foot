@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.071 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest
+com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_invalida_qrNaoLocalizadoInformaSemCobrarNemBaixar -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_invalida_qrNaoLocalizadoInformaSemCobrarNemBaixar(Rn05EncomendaPagaRedTest.java:45)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_limite_itensLocalizadosElegiveisConferemSemCobrancaAdicional -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_limite_itensLocalizadosElegiveisConferemSemCobrancaAdicional(Rn05EncomendaPagaRedTest.java:35)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_conflito_fluxoRetiradaNaoOferecePagamentoDeJaPaga -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_conflito_fluxoRetiradaNaoOferecePagamentoDeJaPaga(Rn05EncomendaPagaRedTest.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_feliz_qrLocalizaPagaExibeSemNovaCobranca -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_feliz_qrLocalizaPagaExibeSemNovaCobranca(Rn05EncomendaPagaRedTest.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_estadoProibido_retiradaNaoGeraVendaOuCobrancaNova -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rn05EncomendaPagaRedTest.rn05_estadoProibido_retiradaNaoGeraVendaOuCobrancaNova(Rn05EncomendaPagaRedTest.java:69)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

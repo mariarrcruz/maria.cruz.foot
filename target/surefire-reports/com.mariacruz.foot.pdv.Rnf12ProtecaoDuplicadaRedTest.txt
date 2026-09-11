@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest
+com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_limite_segundaTentativaOuDuploCliqueNaoGeraSegundaMutacao -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_limite_segundaTentativaOuDuploCliqueNaoGeraSegundaMutacao(Rnf12ProtecaoDuplicadaRedTest.java:30)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_feliz_encomendaElegivelBaixadaUmaVez -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_feliz_encomendaElegivelBaixadaUmaVez(Rnf12ProtecaoDuplicadaRedTest.java:19)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_invalida_baixaComEstadoJaRealizadoEImpedida -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_invalida_baixaComEstadoJaRealizadoEImpedida(Rnf12ProtecaoDuplicadaRedTest.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_estadoProibido_duasBaixasParaMesmaEncomendaFalha -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: AtendimentoEncomendas.localizarPorQr não implementado
+	at com.mariacruz.foot.pdv.AtendimentoEncomendas.localizarPorQr(AtendimentoEncomendas.java:12)
+	at com.mariacruz.foot.pdv.Rnf12ProtecaoDuplicadaRedTest.rnf12_estadoProibido_duasBaixasParaMesmaEncomendaFalha(Rnf12ProtecaoDuplicadaRedTest.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

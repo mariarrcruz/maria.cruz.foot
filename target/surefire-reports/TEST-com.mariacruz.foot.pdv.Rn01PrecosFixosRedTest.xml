@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest" time="0.07" tests="6" errors="6" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/workspaces/maria.cruz.foot/target/test-classes:/workspaces/maria.cruz.foot/target/classes:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.3/junit-jupiter-5.11.3.jar:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.3/junit-jupiter-api-5.11.3.jar:/home/codespace/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/codespace/.m2/repository/org/junit/platform/junit-platform-commons/1.11.3/junit-platform-commons-1.11.3.jar:/home/codespace/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.3/junit-jupiter-params-5.11.3.jar:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.3/junit-jupiter-engine-5.11.3.jar:/home/codespace/.m2/repository/org/junit/platform/junit-platform-engine/1.11.3/junit-platform-engine-1.11.3.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/local/sdkman/candidates/java/25.0.2-ms/lib"/>
+    <property name="sun.java.command" value="/workspaces/maria.cruz.foot/target/surefire/surefirebooter-20260911005901128_3.jar /workspaces/maria.cruz.foot/target/surefire 2026-09-11T00-59-00_955-jvmRun1 surefire-20260911005901128_1tmp surefire_0-20260911005901128_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/workspaces/maria.cruz.foot/target/test-classes:/workspaces/maria.cruz.foot/target/classes:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.3/junit-jupiter-5.11.3.jar:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.3/junit-jupiter-api-5.11.3.jar:/home/codespace/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/codespace/.m2/repository/org/junit/platform/junit-platform-commons/1.11.3/junit-platform-commons-1.11.3.jar:/home/codespace/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.3/junit-jupiter-params-5.11.3.jar:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.3/junit-jupiter-engine-5.11.3.jar:/home/codespace/.m2/repository/org/junit/platform/junit-platform-engine/1.11.3/junit-platform-engine-1.11.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/codespace"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/usr/local/sdkman/candidates/java/25.0.2-ms"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/workspaces/maria.cruz.foot"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/workspaces/maria.cruz.foot/target/surefire/surefirebooter-20260911005901128_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.2+10-LTS"/>
+    <property name="user.name" value="codespace"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-1064-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-13053558"/>
+    <property name="localRepository" value="/home/codespace/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="/workspaces/maria.cruz.foot"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="25.0.2+10-LTS"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="rn01_limite_quantidadeConsistenteEntreSelecaoRevisaoERegistro" classname="com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest" time="0.012">
+    <error message="RED: CatalogoPrecos.totalDe não implementado" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalDe(CatalogoPrecos.java:16)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_limite_quantidadeConsistenteEntreSelecaoRevisaoERegistro(Rn01PrecosFixosRedTest.java:66)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+  <testcase name="rn01_feliz_bebidaCustaSeisReais" classname="com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest" time="0.007">
+    <error message="RED: CatalogoPrecos.precoDe não implementado" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_bebidaCustaSeisReais(Rn01PrecosFixosRedTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+  <testcase name="rn01_feliz_salgadoCustaOitoReais" classname="com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest" time="0.01">
+    <error message="RED: CatalogoPrecos.precoDe não implementado" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_salgadoCustaOitoReais(Rn01PrecosFixosRedTest.java:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+  <testcase name="rn01_limite_pedidoComUmDeCadaGrupoSomaVinteENove" classname="com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest" time="0.004">
+    <error message="RED: CatalogoPrecos.totalDe não implementado" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalDe(CatalogoPrecos.java:16)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_limite_pedidoComUmDeCadaGrupoSomaVinteENove(Rn01PrecosFixosRedTest.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+  <testcase name="rn01_estadoProibido_vendaPersistidaNaoDivergeDoPrecoRevisado" classname="com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest" time="0.004">
+    <error message="RED: CatalogoPrecos.totalRevisadoDe não implementado" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_estadoProibido_vendaPersistidaNaoDivergeDoPrecoRevisado(Rn01PrecosFixosRedTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+  <testcase name="rn01_feliz_bolosETortasCustamQuinzeReais" classname="com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest" time="0.004">
+    <error message="RED: CatalogoPrecos.precoDe não implementado" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rn01PrecosFixosRedTest.rn01_feliz_bolosETortasCustamQuinzeReais(Rn01PrecosFixosRedTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+</testsuite>

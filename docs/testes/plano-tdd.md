@@ -332,3 +332,227 @@ O plano estará pronto para virar suite TDD quando:
 - os ADRs condicionais tiverem status atualizado;
 - codigo e testes existirem para receber os casos;
 - cada caso puder apontar para uma regra de origem sem depender de suposicao.
+
+## 9. Execucao RED — 2026-09-11 (fase red do TDD)
+
+**Suite:** Maven + JUnit 5 (`pom.xml`, `src/test/java/com/mariacruz/foot/pdv/*RedTest.java`).
+**Stubs:** `src/main/java/com/mariacruz/foot/pdv/` — apenas assinaturas
+(`CatalogoPrecos`, `RegistroVendas`, `PagamentoPix`, `AtendimentoEncomendas`,
+`FormasPagamentoAceitas`, `ControleAcesso` + records `Pedido/ItemPedido/Venda/Encomenda/Usuario`);
+todos os métodos lançam `UnsupportedOperationException("RED: ... não implementado")`.
+Nenhuma regra de negócio foi implementada.
+
+**Resultado:** `mvn clean test -Dtest='Rn01*,Rn02*,Rn03*,Rn04*,Rn05*,Rn06*,Rn07*,Rnf*'`
+→ `Tests run: 75, Failures: 3, Errors: 72, Skipped: 0`.
+100% dos 75 testes novos falham pelo motivo esperado (raiz `UnsupportedOperationException`
+dos stubs; os 3 `Failures` do `Rnf11AcessoRestritoRedTest.rnf11_estadoProibido_*`
+são `assertThrows(SecurityException)` recebendo `UnsupportedOperationException` — ou seja,
+também RED por "não implementado").
+**Nenhum teste já passa.** Investigação: não há caso mal escrito nem regra já implementada;
+todos os stubs estão sem lógica, conforme exigido na fase red.
+
+**Convenção:** nome do teste cita o ID da regra; corpo em Arrange-Act-Assert;
+asserções sobre comportamento esperado (valores, estados, pertinência às consultas),
+nunca sobre implementação.
+
+### 9.1 Matriz regra → caso do plano → teste → status
+
+Legenda: `RED` = teste escrito, falha esperada por não implementado.
+`SEM TESTE` = sem teste automatizado, com justificativa (não inventar requisito).
+
+#### RN-01 — Preços fixos
+
+| Caso do plano (§3) | Teste | Status |
+|---|---|---|
+| Feliz salgados R$ 8,00 | `Rn01PrecosFixosRedTest.rn01_feliz_salgadoCustaOitoReais` | RED |
+| Feliz bolos/tortas R$ 15,00 | `Rn01PrecosFixosRedTest.rn01_feliz_bolosETortasCustamQuinzeReais` | RED |
+| Feliz bebidas R$ 6,00 | `Rn01PrecosFixosRedTest.rn01_feliz_bebidaCustaSeisReais` | RED |
+| Limite um de cada grupo (R$ 29,00) | `Rn01PrecosFixosRedTest.rn01_limite_pedidoComUmDeCadaGrupoSomaVinteENove` | RED |
+| Limite quantidade consistente seleção/revisão/registro | `Rn01PrecosFixosRedTest.rn01_limite_quantidadeConsistenteEntreSelecaoRevisaoERegistro` | RED |
+| Estado proibido venda persistida diverge da revisada | `Rn01PrecosFixosRedTest.rn01_estadoProibido_vendaPersistidaNaoDivergeDoPrecoRevisado` | RED |
+| Inválida produto sem preço/grupo desconhecido | — | SEM TESTE (bloqueado: comportamento não definido; não presumir preço) |
+| Inválida alterar preço na tela | — | SEM TESTE (pergunta aberta; decidir antes do teste) |
+| Conflito preço exibido ≠ preço do total | — | SEM TESTE (bloqueado: bloqueio/nova revisão indefinidos) |
+
+#### RN-02 — Pagamentos aceitos
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz Pix | `Rn02PagamentosAceitosRedTest.rn02_feliz_pixPodeSerRegistrado` | RED |
+| Feliz débito | `Rn02PagamentosAceitosRedTest.rn02_feliz_debitoPodeSerRegistrado` | RED |
+| Feliz crédito | `Rn02PagamentosAceitosRedTest.rn02_feliz_creditoPodeSerRegistrado` | RED |
+| Limite três formas agrupadas | `Rn02PagamentosAceitosRedTest.rn02_limite_cadaVendaAgrupadaNaFormaCorrespondente` | RED |
+| Inválida forma fora das três | `Rn02PagamentosAceitosRedTest.rn02_invalida_formaForaDasTresNaoEAceita` | RED |
+| Estado proibido venda aprovada com forma inválida | `Rn02PagamentosAceitosRedTest.rn02_estadoProibido_vendaAprovadaComFormaForaDasTresERejeitada` | RED |
+| Inválida forma ausente | — | SEM TESTE (bloqueado: erro/mensagem não especificados) |
+| Conflito pagamento online | — | SEM TESTE (ADR-002 bloqueada; sem contrato do provedor) |
+
+#### RN-03 — Confirmação externa do Pix
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz confirma na maquininha → prossegue | `Rn03PixExternoRedTest.rn03_feliz_confirmacaoExternaPermiteProsseguirRegistro` | RED |
+| Limite confirmação antes do registro | `Rn03PixExternoRedTest.rn03_limite_confirmacaoAntesDoRegistroPermiteRegistrarDepois` | RED |
+| Inválida sem confirmação externa | `Rn03PixExternoRedTest.rn03_invalida_semConfirmacaoExternaNaoRegistraComoConfirmado` | RED |
+| Conflito PDV não substitui maquininha | `Rn03PixExternoRedTest.rn03_conflito_pdvNaoSubstituiValidacaoExterna` | RED |
+| Estado proibido Pix concluído sem confirmação | `Rn03PixExternoRedTest.rn03_estadoProibido_pixSemConfirmacaoNaoEApresentadoComoConcluido` | RED |
+| Inválida QR da maquininha não validável | — | SEM TESTE (bloqueado: mensagem/recuperação indefinidas) |
+
+#### RN-04 — Toda venda concluída é registrada
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz venda válida registrada + confirmação | `Rn04RegistroVendaRedTest.rn04_feliz_vendaValidaRegistradaComConfirmacaoClara` | RED |
+| Limite um item | `Rn04RegistroVendaRedTest.rn04_limite_vendaComUmItemPreservaItemEQuantidade` | RED |
+| Limite vários itens | `Rn04RegistroVendaRedTest.rn04_limite_vendaComVariosItensPreservaTodos` | RED |
+| Inválida falha antes da confirmação | `Rn04RegistroVendaRedTest.rn04_invalida_falhaAntesDaConfirmacaoNaoApresentaComoConcluida` | RED |
+| Estado proibido concluída ausente | `Rn04RegistroVendaRedTest.rn04_estadoProibido_vendaConcluidaAusenteNasConsultasFalha` | RED |
+| Estado proibido duplicada | `Rn04RegistroVendaRedTest.rn04_estadoProibido_mesmaVendaDuplicadaNasConsultasFalha` | RED |
+| Inválida campo mínimo ausente | — | SEM TESTE (bloqueado: rejeição não detalhada) |
+| Conflito reenvio após falha | — | SEM TESTE (condicional: idempotência ADR-001 proposta, não aprovada) |
+
+#### RN-05 — Encomenda paga não gera nova cobrança
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz QR localiza paga, sem cobrança | `Rn05EncomendaPagaRedTest.rn05_feliz_qrLocalizaPagaExibeSemNovaCobranca` | RED |
+| Limite elegível confere sem cobrança | `Rn05EncomendaPagaRedTest.rn05_limite_itensLocalizadosElegiveisConferemSemCobrancaAdicional` | RED |
+| Inválida QR não localizado | `Rn05EncomendaPagaRedTest.rn05_invalida_qrNaoLocalizadoInformaSemCobrarNemBaixar` | RED |
+| Conflito retirada oferece pagamento de já paga | `Rn05EncomendaPagaRedTest.rn05_conflito_fluxoRetiradaNaoOferecePagamentoDeJaPaga` | RED |
+| Estado proibido retirada gera venda/cobrança | `Rn05EncomendaPagaRedTest.rn05_estadoProibido_retiradaNaoGeraVendaOuCobrancaNova` | RED |
+| Inválida QR sem estado de paga | — | SEM TESTE (bloqueado: origem/estados de encomenda indefinidos) |
+
+#### RN-06 — Retirada somente após conferência e entrega
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz localiza→confere→entrega→baixa | `Rn06RetiradaRedTest.rn06_feliz_localizaConfereEntregaEConfirmaMarcaRealizada` | RED |
+| Limite confirmação imediata pós-entrega | `Rn06RetiradaRedTest.rn06_limite_confirmacaoImediataAposEntregaPermiteBaixa` | RED |
+| Inválida baixa antes da conferência | `Rn06RetiradaRedTest.rn06_invalida_baixaAntesDaConferenciaExigeConferencia` | RED |
+| Inválida baixa antes da entrega | `Rn06RetiradaRedTest.rn06_invalida_baixaAntesDaEntregaNaoMarcaRealizada` | RED |
+| Conflito duas tentativas de baixa | `Rn06RetiradaRedTest.rn06_conflito_duasTentativasDeBaixaNaoGeramDuasBaixas` | RED |
+| Estado proibido realizada sem conferência+entrega | `Rn06RetiradaRedTest.rn06_estadoProibido_realizadaSemConferenciaEEntregaEProibida` | RED |
+| Estado proibido já realizada recebe nova baixa | `Rn06RetiradaRedTest.rn06_estadoProibido_encomendaJaRealizadaNaoRecebeNovaBaixa` | RED |
+
+#### RN-07 — Não emitir comprovante
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz conclui sem comprovante | `Rn07SemComprovanteRedTest.rn07_feliz_vendaConcluidaSemExigirNemEmitirComprovante` | RED |
+| Limite qualquer forma mantém regra | `Rn07SemComprovanteRedTest.rn07_limite_qualquerFormaAceitaMantemNaoEmissao` | RED |
+| Inválida fluxo exige comprovante | `Rn07SemComprovanteRedTest.rn07_invalida_fluxoNaoExigeComprovanteParaConcluir` | RED |
+| Estado proibido emite comprovante | `Rn07SemComprovanteRedTest.rn07_estadoProibido_pdvNaoEmiteComprovante` | RED |
+| Conflito cliente solicita comprovante | — | SEM TESTE (pergunta aberta; sem tratamento documentado) |
+
+#### RNF-01 — Consistência dos cálculos
+
+| Caso do plano (§4) | Teste | Status |
+|---|---|---|
+| Feliz revisão = persistido | `Rnf01ConsistenciaCalculosRedTest.rnf01_feliz_totalRevisaoIgualTotalPersistido` | RED |
+| Limite um item | `Rnf01ConsistenciaCalculosRedTest.rnf01_limite_pedidoDeUmItemPreservaIgualdade` | RED |
+| Limite vários itens | `Rnf01ConsistenciaCalculosRedTest.rnf01_limite_pedidoDeVariosItensPreservaIgualdade` | RED |
+| Conflito preço da tela diverge | `Rnf01ConsistenciaCalculosRedTest.rnf01_conflito_precoDaTelaDivergenteDoCadastradoNaoConclui` | RED |
+| Estado proibido revisado ≠ registrado | `Rnf01ConsistenciaCalculosRedTest.rnf01_estadoProibido_valorRevisadoDiferenteDoRegistradoFalha` | RED |
+| Inválida alteração entre revisão e registro | — | SEM TESTE (bloqueado: bloqueio/revisão indefinidos) |
+
+#### RNF-02 — Integridade do registro
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz aparece em total/produto/forma | `Rnf02IntegridadeRegistroRedTest.rnf02_feliz_vendaConfirmadaApareceEmTotalProdutoEForma` | RED |
+| Limite um item | `Rnf02IntegridadeRegistroRedTest.rnf02_limite_vendaDeUmItemComQuantidadeCorreta` | RED |
+| Limite vários itens | `Rnf02IntegridadeRegistroRedTest.rnf02_limite_vendaDeVariosItensComQuantidadesCorretas` | RED |
+| Inválida falha antes de confirmar | `Rnf02IntegridadeRegistroRedTest.rnf02_invalida_falhaAntesDeConfirmarNaoApareceComoConfirmada` | RED |
+| Estado proibido ausente | `Rnf02IntegridadeRegistroRedTest.rnf02_estadoProibido_registroConfirmadoAusenteFalha` | RED |
+| Estado proibido duplicado | `Rnf02IntegridadeRegistroRedTest.rnf02_estadoProibido_registroConfirmadoDuplicadoFalha` | RED |
+| Conflito reenvio | — | SEM TESTE (condicional: ADR-001 proposta) |
+
+#### RNF-07/RNF-08 — Prevenção de erro e feedback
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz total destacado + confirmação da baixa | `Rnf07Rnf08PrevencaoFeedbackRedTest.rnf07_feliz_totalDestacadoAntesDaVendaEConfirmacaoAntesDaBaixa` | RED |
+| Limite QR não localizado | `Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_qrNaoLocalizadoTemMensagemCompreensivel` | RED |
+| Limite já realizada | `Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_encomendaJaRealizadaTemMensagemCompreensivel` | RED |
+| Limite falha de registro | `Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_limite_falhaDeRegistroTemMensagemCompreensivel` | RED |
+| Inválida QR inexistente | `Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_invalida_qrInexistenteInformaNaoLocalizadoENaoBaixa` | RED |
+| Estado proibido sucesso sem registro | `Rnf07Rnf08PrevencaoFeedbackRedTest.rnf08_estadoProibido_sucessoSemRegistroConfirmadoEProibido` | RED |
+| Conflito erro pagamento online | — | SEM TESTE (ADR-002 bloqueada) |
+
+#### RNF-09/RNF-10 — Persistência e falhas online
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz confirmada permanece disponível | `Rnf09Rnf10PersistenciaFalhasRedTest.rnf09_feliz_vendaConfirmadaPermaneceDisponivelNasConsultas` | RED |
+| Limite falha de comunicação | `Rnf09Rnf10PersistenciaFalhasRedTest.rnf10_limite_falhaDeComunicacaoInformaFalhaSemFalsaConclusao` | RED |
+| Conflito falhar fechado, sem offline | `Rnf09Rnf10PersistenciaFalhasRedTest.rnf10_conflito_falharFechadoSemOperarOffline` | RED |
+| Estado proibido perdida | `Rnf09Rnf10PersistenciaFalhasRedTest.rnf09_estadoProibido_vendaConfirmadaPerdidaFalha` | RED |
+| Estado proibido falsa confirmação | `Rnf09Rnf10PersistenciaFalhasRedTest.rnf10_estadoProibido_falsaConfirmacaoFalha` | RED |
+| Inválida reenvio após falha | — | SEM TESTE (condicional: ADR-001 propõe idempotência, não aprovada) |
+
+#### RNF-11 — Acesso restrito
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz autorizado registra/consulta/baixa | `Rnf11AcessoRestritoRedTest.rnf11_feliz_usuarioAutorizadoRegistraConsultaEBaixa` | RED |
+| Limite cada operação valida autorização | `Rnf11AcessoRestritoRedTest.rnf11_limite_cadaOperacaoProtegidaValidaAutorizacao` | RED |
+| Inválida não autorizado | `Rnf11AcessoRestritoRedTest.rnf11_invalida_usuarioNaoAutorizadoTemAcessoNegado` | RED |
+| Estado proibido não autorizado opera (3 ops) | `Rnf11AcessoRestritoRedTest.rnf11_estadoProibido_usuarioNaoAutorizadoNaoOpera[registrar/consultar/baixar]` | RED |
+| Conflito ciclo criação/revogação/auditoria | — | SEM TESTE (não definido nos RFCs; §6 pergunta 5) |
+
+#### RNF-12 — Proteção contra retirada duplicada
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz elegível baixada uma vez | `Rnf12ProtecaoDuplicadaRedTest.rnf12_feliz_encomendaElegivelBaixadaUmaVez` | RED |
+| Limite segunda tentativa/duplo clique | `Rnf12ProtecaoDuplicadaRedTest.rnf12_limite_segundaTentativaOuDuploCliqueNaoGeraSegundaMutacao` | RED |
+| Inválida estado já realizado | `Rnf12ProtecaoDuplicadaRedTest.rnf12_invalida_baixaComEstadoJaRealizadoEImpedida` | RED |
+| Estado proibido duas baixas | `Rnf12ProtecaoDuplicadaRedTest.rnf12_estadoProibido_duasBaixasParaMesmaEncomendaFalha` | RED |
+| Conflito mecanismo transacional | — | SEM TESTE (condicional: ADR-003 propõe baixa condicional, não aprovada; comportamento coberto pelos 4 testes acima) |
+
+#### RNF-13/RNF-14 — Preços centralizados e rastreabilidade
+
+| Caso do plano | Teste | Status |
+|---|---|---|
+| Feliz fonte central | `Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf13_feliz_selecaoCalculoRevisaoEConsultaUsamFonteCentral` | RED |
+| Feliz id + data/hora | `Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf14_feliz_vendaEAlteracaoDeEstadoTemIdEDataHora` | RED |
+| Inválida origem divergente | `Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf13_invalida_origemDePrecoDiferenteEntreTelasNaoEAceita` | RED |
+| Estado proibido sem id/timestamp | `Rnf13Rnf14PrecosRastreabilidadeRedTest.rnf14_estadoProibido_registroSemIdOuTimestampFalha` | RED |
+| Limite governança de alteração | — | SEM TESTE (governança de alteração não definida) |
+| Conflito alteração concorrente | — | SEM TESTE (mecanismo pendente; validar estado atual sem contrato) |
+
+### 9.2 Regras SEM teste automatizado nesta fase (destaque exigido)
+
+Nenhum teste foi inventado para estes casos — escrever asserção seria presumir
+comportamento fora dos artefatos (vedado pelo §3 e por `AGENTS.md`):
+
+- **RNF-03/RNF-04 (pico e pedidos variados): SEM TESTE unitário.** Motivo: RNF-03/RNF-04
+  exigem "responder adequadamente" no pico 20h30–21h; M-04/M-05 são metas provisórias
+  (§4, §6, RNF M-04/M-05) e dispositivo/amostra não definidos. Sem critério aprovado,
+  qualquer `assertTimeout` seria requisito inventado. Cobertura funcional do fluxo
+  (1 item / vários itens) já é exercida pelos testes RN-04/RNF-02 acima.
+- **RNF-05/RNF-06 (baixa carga e legibilidade): SEM TESTE unitário.** Motivo: sem tamanho
+  de tela/dispositivo, sem contagem de passos e com M-06/M-07 provisórias; trade-off
+  "mais conferência × poucos passos" pendente de decisão de UX (§4). Não há asserção
+  objetiva derivável da fonte.
+- **RNF-15 (navegador compatível): SEM TESTE.** Motivo: matriz de compatibilidade
+  inexistente; dispositivo/navegador de Carla não informados (§6 perguntas 6–7, §8).
+  Declarar compatibilidade seria falso-positivo (estado proibido do próprio plano).
+- **ADRs (todos os casos do §5): SEM TESTE como comportamento obrigatório.**
+  ADR-001 proposta, ADR-002 bloqueada, ADR-003 proposta, ADR-004 condicional/`[SEM REQUISITO]`.
+  Seus casos só viram teste após aprovação (priorização "Condicional", §7).
+- **Casos bloqueados/perguntas dos §§3–4** listados como `SEM TESTE` na matriz acima
+  (preço sem cadastro, alteração de preço, forma ausente, QR sem estado, comprovante
+  solicitado, idempotência, concorrência, governança de preços). Cada um aponta para
+  a pergunta aberta correspondente do §6.
+
+### 9.3 Cobertura final
+
+- Todas as regras **RN-01 a RN-07** possuem ao menos um teste RED (total 39).
+- Todas as regras **RNF-01, RNF-02, RNF-07, RNF-08, RNF-09, RNF-10, RNF-11, RNF-12,
+  RNF-13, RNF-14** possuem ao menos um teste RED (total 36).
+- **RNF-03, RNF-04, RNF-05, RNF-06, RNF-15** estão mapeadas mas SEM teste automatizado,
+  com justificativa acima — são as únicas regras sem teste, destacadas conforme exigido.
+- Nenhum caso bloqueado/pergunta/condicional recebeu teste inventado.
+- Próximo passo (fora da fase red): fase green implementa o menor comportamento para
+  fazer cada teste RED passar, sem alterar os testes.

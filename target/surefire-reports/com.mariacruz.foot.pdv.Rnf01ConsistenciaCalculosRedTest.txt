@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.039 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest
+com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_limite_pedidoDeVariosItensPreservaIgualdade -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_limite_pedidoDeVariosItensPreservaIgualdade(Rnf01ConsistenciaCalculosRedTest.java:48)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_estadoProibido_valorRevisadoDiferenteDoRegistradoFalha -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_estadoProibido_valorRevisadoDiferenteDoRegistradoFalha(Rnf01ConsistenciaCalculosRedTest.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_feliz_totalRevisaoIgualTotalPersistido -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_feliz_totalRevisaoIgualTotalPersistido(Rnf01ConsistenciaCalculosRedTest.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_limite_pedidoDeUmItemPreservaIgualdade -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_limite_pedidoDeUmItemPreservaIgualdade(Rnf01ConsistenciaCalculosRedTest.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_conflito_precoDaTelaDivergenteDoCadastradoNaoConclui -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.precoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.precoDe(CatalogoPrecos.java:12)
+	at com.mariacruz.foot.pdv.Rnf01ConsistenciaCalculosRedTest.rnf01_conflito_precoDaTelaDivergenteDoCadastradoNaoConclui(Rnf01ConsistenciaCalculosRedTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

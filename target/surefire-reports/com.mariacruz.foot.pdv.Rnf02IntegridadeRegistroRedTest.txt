@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.071 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest
+com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_limite_vendaDeUmItemComQuantidadeCorreta -- Time elapsed: 0.014 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_limite_vendaDeUmItemComQuantidadeCorreta(Rnf02IntegridadeRegistroRedTest.java:36)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_estadoProibido_registroConfirmadoDuplicadoFalha -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_estadoProibido_registroConfirmadoDuplicadoFalha(Rnf02IntegridadeRegistroRedTest.java:79)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_limite_vendaDeVariosItensComQuantidadesCorretas -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_limite_vendaDeVariosItensComQuantidadesCorretas(Rnf02IntegridadeRegistroRedTest.java:48)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_feliz_vendaConfirmadaApareceEmTotalProdutoEForma -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_feliz_vendaConfirmadaApareceEmTotalProdutoEForma(Rnf02IntegridadeRegistroRedTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_invalida_falhaAntesDeConfirmarNaoApareceComoConfirmada -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: RegistroVendas.buscarPorId não implementado
+	at com.mariacruz.foot.pdv.RegistroVendas.buscarPorId(RegistroVendas.java:18)
+	at com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_invalida_falhaAntesDeConfirmarNaoApareceComoConfirmada(Rnf02IntegridadeRegistroRedTest.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_estadoProibido_registroConfirmadoAusenteFalha -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rnf02IntegridadeRegistroRedTest.rnf02_estadoProibido_registroConfirmadoAusenteFalha(Rnf02IntegridadeRegistroRedTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

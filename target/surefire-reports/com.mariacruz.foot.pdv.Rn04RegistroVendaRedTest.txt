@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! -- in com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest
+com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_feliz_vendaValidaRegistradaComConfirmacaoClara -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_feliz_vendaValidaRegistradaComConfirmacaoClara(Rn04RegistroVendaRedTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_estadoProibido_vendaConcluidaAusenteNasConsultasFalha -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_estadoProibido_vendaConcluidaAusenteNasConsultasFalha(Rn04RegistroVendaRedTest.java:79)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_estadoProibido_mesmaVendaDuplicadaNasConsultasFalha -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_estadoProibido_mesmaVendaDuplicadaNasConsultasFalha(Rn04RegistroVendaRedTest.java:91)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_limite_vendaComUmItemPreservaItemEQuantidade -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_limite_vendaComUmItemPreservaItemEQuantidade(Rn04RegistroVendaRedTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_limite_vendaComVariosItensPreservaTodos -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: CatalogoPrecos.totalRevisadoDe não implementado
+	at com.mariacruz.foot.pdv.CatalogoPrecos.totalRevisadoDe(CatalogoPrecos.java:20)
+	at com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_limite_vendaComVariosItensPreservaTodos(Rn04RegistroVendaRedTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_invalida_falhaAntesDaConfirmacaoNaoApresentaComoConcluida -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException: RED: RegistroVendas.buscarPorId não implementado
+	at com.mariacruz.foot.pdv.RegistroVendas.buscarPorId(RegistroVendas.java:18)
+	at com.mariacruz.foot.pdv.Rn04RegistroVendaRedTest.rn04_invalida_falhaAntesDaConfirmacaoNaoApresentaComoConcluida(Rn04RegistroVendaRedTest.java:70)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
